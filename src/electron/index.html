@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Hello World!</title>
+    <style>
+        
+    </style>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    We are using Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    and Electron <span id="electron-version"></span>.
+
+    <h1> Add two numbers with python: </h1>
+    <form>
+        <input type="number" id="num-one"> 
+        <label for="num-one"> First number </label> <br>
+        <input type="number" id="num-two">
+        <label for="num-two"> Second number </label> <br>
+        <button id="add-button">Add them!</button>
+    </form>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
