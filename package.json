@@ -1,0 +1,26 @@
+{
+  "name": "python-electron-example",
+  "version": "1.0.0",
+  "description": "An example repository showing how electron and python can communicate locally.",
+  "main": "src/electron/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustAl3x/python-electron-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustAl3x/python-electron-example/issues"
+  },
+  "homepage": "https://github.com/JustAl3x/python-electron-example#readme",
+  "devDependencies": {
+    "electron": "^13.1.7"
+  },
+  "dependencies": {
+    "zeromq": "^5.2.8"
+  }
+}
