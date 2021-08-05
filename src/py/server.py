@@ -1,21 +1,13 @@
-from flask import Flask, request, jsonify
-from flask_cors import CORS
+import sys, json
 
 
-app = Flask(__name__)
-CORS(app, resources=r'/*')
-
-@app.route('/', methods = ['POST', 'GET'])
-def add():
-    if request.method == 'POST':
-        content = request.json
-        if (content):
-            numOne = content['numOne']
-            numTwo = content['numTwo']
-            return jsonify({"result": (numOne + numTwo)})
-        else:
-            return jsonify({"result": "content"})
-
+def run_calculations(numOne, numTwo):
+    return {"status" : "Success", "result": int(numOne) + int(numTwo)}
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    if (len(sys.argv) != 3):
+        result = {"status": "Invalid Arguments", "result": [1,2,3,4]}
+        print(json.dumps(result))
+    else:   
+        result = run_calculations(sys.argv[1], sys.argv[2])
+        print(json.dumps(result))
